@@ -18,14 +18,15 @@ class FactoryFactura:
         self.precio = 100
     def crear(self, productos):
         self.producto = productos
-
+        return self.producto
     def facturar(self):
         self.precio_final = self.precio + (self.precio * self.producto)
         return self.precio_final
 
-a = Naturaleza.alimentaria
-
-producto = Producto(a)
+a = Naturaleza()
+producto = Producto(a.alimentaria)
 print(producto)
-precio_neto = FactoryFactura.crear(producto).facturar()
+b = FactoryFactura()
+p = b.crear(producto)
+precio_neto = p.facturar()
 print(precio_neto)
