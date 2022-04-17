@@ -1,3 +1,4 @@
+
 class Mayusculas:
     def __init__(self, lista):
         self.lista = lista
@@ -9,7 +10,7 @@ class Mayusculas:
             self.lista[j] = self.lista[j].upper()
             print (self.lista[j].upper())
         return lista1
-a = Mayusculas(['djnjdnf', 'dndf'])
+a = Mayusculas()
 b = a.mayuscula()
 
 
