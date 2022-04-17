@@ -1,3 +1,4 @@
+#controler
 from models import Mayusculas, Escribir
 from view import imprime_datos
 lista = []
