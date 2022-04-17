@@ -9,5 +9,3 @@ def visitante():
     lista.append (usuarioq)
     
     
-visitante()
-print (lista)
