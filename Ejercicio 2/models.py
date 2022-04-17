@@ -5,7 +5,15 @@ class Mayusculas:
         for j in range (len(self.lista)):
             
             self.lista[j] = self.lista[j].upper()
-        print(self.lista)
+        return self.lista
 
 a = Mayusculas(['hola', 'jnfj'])
-a.mayuscula()
+b = a.mayuscula()
+class Escribir:
+    def __init__(self, lista):
+        f = open('frases_mayusculas.txt', 'a')
+        for x in range(len(lista)):
+            f.write(lista[x] + '\n')
+        f.close()
+    
+e = Escribir(b)
