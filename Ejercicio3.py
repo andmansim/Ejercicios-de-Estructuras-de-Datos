@@ -1,6 +1,6 @@
 class Producto:
-    def __init__(self):
-        pass
+    def __init__(self, tipo):
+        self.tipo = tipo
     
 
 class Naturaleza:
