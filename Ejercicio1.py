@@ -10,4 +10,9 @@ class Si:
         self.condicion = condicion
         self.entonces = entonces
         self.si_no = si_no
+
+class MientasQue:
+    def __init__(self, condicion, bloque):
+        self.condicion = condicion
+        self.bloque = bloque
         
