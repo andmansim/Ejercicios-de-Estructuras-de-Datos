@@ -1,11 +1,6 @@
-lista = []
-def visitante():
-    
-    print('Introduce una frase')
-    usuario = input()
-    lista.append (usuario)
-    print('Introduce otra frase')
-    usuarioq = input()
-    lista.append (usuarioq)
+def imprime_datos(lista):
+    for i in range(len(lista)):
+        print('Vista de las frases que ha elegido:')
+        print(lista[i])
     
     

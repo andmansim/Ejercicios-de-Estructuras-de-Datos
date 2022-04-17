@@ -1,4 +1,5 @@
 from models import Mayusculas, Escribir
+from view import imprime_datos
 lista = []
 def visitante():
     
@@ -12,5 +13,9 @@ def visitante():
 if __name__ == "__main__":
     visitante()
     lista1 = Mayusculas(lista).mayuscula
-    Escribir(lista1)
+    lista_final = Escribir(lista).get_lista()
+    imprime_datos (lista_final)
+    
+    
+    
     
