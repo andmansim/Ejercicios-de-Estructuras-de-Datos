@@ -12,9 +12,9 @@ def visitante():
     
 if __name__ == "__main__":
     visitante()
-    print(lista)
-    lista1 = Mayusculas(lista).mayuscula
-    print(lista1)
+    lista1 = Mayusculas(lista).mayuscula()
+    lista_final = Escribir(lista1)
+    imprime_datos(lista_final)
    
     
     

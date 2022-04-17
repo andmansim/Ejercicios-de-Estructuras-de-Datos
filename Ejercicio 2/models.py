@@ -10,8 +10,8 @@ class Mayusculas:
             self.lista[j] = self.lista[j].upper()
             print (self.lista[j].upper())
         return lista1
-a = Mayusculas()
-b = a.mayuscula()
+#a = Mayusculas()
+#b = a.mayuscula()
 
 
 class Escribir:
@@ -25,4 +25,4 @@ class Escribir:
         f.close()
        
     
-c = Escribir(b)
+#c = Escribir(b)
