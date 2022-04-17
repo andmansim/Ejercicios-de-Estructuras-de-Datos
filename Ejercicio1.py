@@ -30,22 +30,21 @@ class Mostrar:
         
         print(self.mensaje)
 
+def visitante():
+    
+    mostrar_ok = Mostrar('"OK"')
+    mostrar_ko = Mostrar('"KO"')
 
-mostrar_ok = Mostrar('"OK"')
-mostrar_ko = Mostrar('"KO"')
+    alternativa1 = 2 + 2 == 4 
+    alternativa2 = 2 + 3 == 20
+    a = Si(alternativa1, mostrar_ok.mensaje, mostrar_ko.mensaje)
+    a.verificar()
+    b = Si(alternativa2, mostrar_ok.mensaje, mostrar_ko.mensaje)
+    b.verificar()
+    bloque_alternativa = Bloque()
+    bloque_alternativa.agregarInstruccion(a)
+    bloque_alternativa.agregarInstruccion(b)
+    c = MientrasQue(True, bloque_alternativa)
+    print(bloque_alternativa.instrucciones)
 
-alternativa1 = 2 + 2 == 4 
-alternativa2 = 2 + 3 == 20
-a = Si(alternativa1, mostrar_ok.mensaje, mostrar_ko.mensaje)
-a.verificar()
-b = Si(alternativa2, mostrar_ok.mensaje, mostrar_ko.mensaje)
-b.verificar()
-bloque_alternativa = Bloque()
-bloque_alternativa.agregarInstruccion(a)
-bloque_alternativa.agregarInstruccion(b)
-c = MientrasQue(True, bloque_alternativa)
-print(bloque_alternativa.instrucciones)
-
-'''
-bloque_alternativa.agregarInstruccion(alternativa)
-bucle = MientrasQue(True, bloque_alternativa)'''
+visitante()
