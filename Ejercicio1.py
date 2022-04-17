@@ -21,7 +21,7 @@ class MientrasQue:
         self.condicion = condicion
         self.bloque = bloque
         while self.condicion:
-            Mostrar(self.bloque).ver()
+            Mostrar(self.bloque).ver
 
 class Mostrar:
     def __init__(self, mensaje):
