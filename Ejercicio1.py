@@ -2,7 +2,7 @@ class Bloque:
     def __init__(self):
         self.instrucciones = []
     
-    def agregarInstruction(self, instruccion):
+    def agregarInstruccion(self, instruccion):
         self.instrucciones.append(instruccion)
 
 class Si:
@@ -13,7 +13,9 @@ class Si:
     def verificar(self):
         if self.condicion == True:
             Mostrar(self.entonces).ver
-class MientasQue:
+        else:
+            Mostrar(self.si_no).ver
+class MientrasQue:
     def __init__(self, condicion, bloque):
         self.condicion = condicion
         self.bloque = bloque
@@ -23,3 +25,10 @@ class Mostrar:
         self.mensaje = mensaje
     def ver(self):
         print(self.mensaje)
+
+mostrar_ok = Mostrar('"OK"')
+mostrar_ko = Mostrar('"KO"')
+alternativa = Si("2 + 2 == 4", mostrar_ok, mostrar_ko)        
+bloque_alternativa = Bloque()
+bloque_alternativa.agregarInstruccion(alternativa)
+bucle = MientrasQue(True, bloque_alternativa)
