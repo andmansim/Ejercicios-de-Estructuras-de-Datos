@@ -15,9 +15,10 @@ class Naturaleza:
 class FactoryFactura:
     def __init__(self):
         pass
-    def crear(self):
-        pasa el producto
+    def crear(self, producto):
+        self.producto = producto
+
     
-    def facturar():
-        pass
-    
+    def facturar(self):
+        self.precio = 100 + (100 * self.producto)
+        return self.precio
