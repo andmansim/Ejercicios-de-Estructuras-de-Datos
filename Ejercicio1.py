@@ -15,10 +15,13 @@ class Si:
             Mostrar(self.entonces).ver
         else:
             Mostrar(self.si_no).ver
+            
 class MientrasQue:
     def __init__(self, condicion, bloque):
         self.condicion = condicion
         self.bloque = bloque
+        while self.condicion:
+            Mostrar(bloque).ver
 
 class Mostrar:
     def __init__(self, mensaje):
