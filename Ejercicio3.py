@@ -5,11 +5,12 @@ class Producto:
 
 class Naturaleza:
     def __init__(self):
-        pass
+        self.iva_a = 5.5/100
+        self.iva_s = 20/100
     def alimentaria(self):
-        return pass
+        return self.iva_a
     def servicio(self):
-        return pass
+        return self.iva_s
     
 class FactoryFactura:
     def __init__(self):
