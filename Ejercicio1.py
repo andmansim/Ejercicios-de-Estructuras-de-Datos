@@ -21,7 +21,7 @@ class MientrasQue:
         self.condicion = condicion
         self.bloque = bloque
         while self.condicion:
-            Mostrar(bloque).ver
+            Mostrar(self.bloque).ver
 
 class Mostrar:
     def __init__(self, mensaje):
@@ -29,9 +29,17 @@ class Mostrar:
     def ver(self):
         print(self.mensaje)
 
+
 mostrar_ok = Mostrar('"OK"')
 mostrar_ko = Mostrar('"KO"')
-alternativa = Si("2 + 2 == 4", mostrar_ok, mostrar_ko)        
+print(mostrar_ok.mensaje)
+alternativa1 = "2 + 2 == 4" 
+alternativa2 = "2 + 3 == 20"
 bloque_alternativa = Bloque()
+bloque_alternativa.agregarInstruccion(alternativa1)
+bloque_alternativa.agregarInstruccion(alternativa2)
+print(bloque_alternativa.instrucciones)
+
+'''
 bloque_alternativa.agregarInstruccion(alternativa)
-bucle = MientrasQue(True, bloque_alternativa)
+bucle = MientrasQue(True, bloque_alternativa)'''
