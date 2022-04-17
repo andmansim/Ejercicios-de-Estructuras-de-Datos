@@ -17,7 +17,3 @@ if __name__ == "__main__":
     
     imprime_datos(lista_final)
    
-    
-    
-    
-    
