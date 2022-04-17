@@ -11,10 +11,10 @@ class Si:
         self.entonces = entonces
         self.si_no = si_no
     def verificar(self):
-        if self.condicion == True:
-            Mostrar(self.entonces).ver
+        if self.condicion :
+            Mostrar(self.entonces).ver()
         else:
-            Mostrar(self.si_no).ver
+            Mostrar(self.si_no).ver()
             
 class MientrasQue:
     def __init__(self, condicion, bloque):
@@ -27,17 +27,23 @@ class Mostrar:
     def __init__(self, mensaje):
         self.mensaje = mensaje
     def ver(self):
+        
         print(self.mensaje)
 
 
 mostrar_ok = Mostrar('"OK"')
 mostrar_ko = Mostrar('"KO"')
-print(mostrar_ok.mensaje)
-alternativa1 = "2 + 2 == 4" 
-alternativa2 = "2 + 3 == 20"
+
+alternativa1 = 2 + 2 == 4 
+alternativa2 = 2 + 3 == 20
+a = Si(alternativa1, mostrar_ok.mensaje, mostrar_ko.mensaje)
+a.verificar()
+b = Si(alternativa2, mostrar_ok.mensaje, mostrar_ko.mensaje)
+b.verificar()
 bloque_alternativa = Bloque()
-bloque_alternativa.agregarInstruccion(alternativa1)
-bloque_alternativa.agregarInstruccion(alternativa2)
+bloque_alternativa.agregarInstruccion(a)
+bloque_alternativa.agregarInstruccion(b)
+c = MientrasQue(True, bloque_alternativa)
 print(bloque_alternativa.instrucciones)
 
 '''
