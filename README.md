@@ -79,9 +79,10 @@ if __name__ == "__main__":
     lista_final = Escribir(lista1).get_lista()
     
     imprime_datos(lista_final)
+   
     
  # models
- class Mayusculas:
+class Mayusculas:
     def __init__(self, lista):
         self.lista = lista
         
@@ -106,8 +107,8 @@ class Escribir:
         f.close()
         return lista_mayus
     
-    #View
-    def imprime_datos(lista):
+#view
+def imprime_datos(lista):
     print('Vista de las frases que ha elegido:')
     for i in range(len(lista)):
         print(lista[i])
