@@ -60,6 +60,58 @@ visitante()
 ```
 # Ejercicio 2
 ```
+#controler
+from models import Mayusculas, Escribir
+from view import imprime_datos
+lista = []
+def visitante():
+    
+    print('Introduce una frase')
+    usuario = input()
+    lista.append (usuario)
+    print('Introduce otra frase')
+    usuario2 = input()
+    lista.append (usuario2)
+    
+if __name__ == "__main__":
+    visitante()
+    lista1 = Mayusculas(lista).mayuscula()
+    lista_final = Escribir(lista1).get_lista()
+    
+    imprime_datos(lista_final)
+    
+ # models
+ class Mayusculas:
+    def __init__(self, lista):
+        self.lista = lista
+        
+    def mayuscula(self):
+       
+        for j in range (len(self.lista)):
+            
+            self.lista[j] = self.lista[j].upper()
+            
+        return self.lista
+
+
+class Escribir:
+    def __init__(self, lista):
+        self.lista = lista
+    def get_lista(self):
+        lista_mayus = []
+        f = open('frases_mayusculas.txt', 'w')
+        for x in range(len(self.lista)):
+            f.write(self.lista[x] + '\n')
+            lista_mayus.append(self.lista[x])
+        f.close()
+        return lista_mayus
+    
+    #View
+    def imprime_datos(lista):
+    print('Vista de las frases que ha elegido:')
+    for i in range(len(lista)):
+        print(lista[i])
+
 
 ```
 # Ejercicio 3
